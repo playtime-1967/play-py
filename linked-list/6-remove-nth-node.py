@@ -5,7 +5,18 @@ from ListNode import ListNode
 
 class Solution:
     def removeNthFromEnd(self, head: ListNode, n: int) -> ListNode:
-        current = head
-        next = head.next
+        dummy = ListNode()
+        dummy.next = head
+        ahead = behind = dummy
+        
+        for _ in range(n+1):
+            ahead=ahead.next
+            
+        while ahead:
+            ahead= ahead.next
+            behind=behind.next
+            
+        behind.next= behind.next.next    
 
-        return head
+        return dummy.next    
+        
