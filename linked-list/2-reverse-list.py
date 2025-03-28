@@ -12,4 +12,16 @@ class Solution:
             prev = current
             current = temp
 
-        return prev
+        return prev  
+    
+    # recursive
+    def reverseList_2(self, head: ListNode) -> ListNode:
+
+        if not head or not head.next:
+            return head
+
+        newHead = self.reverseList_2(head.next)
+        head.next.next = head
+        head.next = None
+
+        return newHead
