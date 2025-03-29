@@ -1,5 +1,4 @@
-# Find if there's a cycle in the nodes of a linked list.
-# Use Slow-Fast pattern to solve the challenge.
+# Find if there's a cycle in nodes of a linked list.
 from ListNode import ListNode
 
 

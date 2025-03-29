@@ -1,4 +1,5 @@
-# Between every pair of adjacent nodes, insert a new node with a value equal to the greatest common divisor of them. Return the linked list after insertion.
+# Between every pair of adjacent nodes, insert a new node with a value equal to the greatest common divisor of them. 
+# Return the linked list after insertion.
 
 import math
 from ListNode import ListNode

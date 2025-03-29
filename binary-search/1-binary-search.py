@@ -8,14 +8,13 @@ def binary_search(arr, target: int) -> bool:
 
     while left <= right:
         mid = left + ((right - left) // 2)
-        print("mm {}", mid)
 
         if arr[mid] == target:
             return True
         elif arr[mid] > target:
             right = mid-1
         else:
-            left = mid + 1
+            left = mid + 1  
 
     return False
 

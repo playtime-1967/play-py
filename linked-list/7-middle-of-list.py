@@ -1,4 +1,4 @@
-# remove the nth node from the end of the list and return its head.
+# Find middle of a list node
 
 from ListNode import ListNode
 

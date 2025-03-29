@@ -1,4 +1,4 @@
-# remove the nth node from the end of the list and return its head.
+# deep copy of every node, its next&random node
 
 class Node:
     def __init__(self, x: int, next: 'Node' = None, random: 'Node' = None):
