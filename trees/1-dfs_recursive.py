@@ -1,11 +1,10 @@
 # Recursive DFS (Inorder, Preorder, Postorder Traversal)
 # The function goes deep first (visiting all left nodes before moving right).
 
-from ctypes.wintypes import tagRECT
 from TreeNode import TreeNode, treeA
 
 
-def dfs_pre_order(node: TreeNode) -> TreeNode:
+def dfs_pre_order(node: TreeNode):
     if not node:
         return
 
@@ -14,7 +13,7 @@ def dfs_pre_order(node: TreeNode) -> TreeNode:
     dfs_pre_order(node.right)
 
 
-def dfs_in_order(node: TreeNode) -> TreeNode:
+def dfs_in_order(node: TreeNode):
     if not node:
         return
 
@@ -23,7 +22,7 @@ def dfs_in_order(node: TreeNode) -> TreeNode:
     dfs_in_order(node.right)
 
 
-def dfs_post_order(node: TreeNode) -> TreeNode:
+def dfs_post_order(node: TreeNode):
     if not node:
         return
 
@@ -32,7 +31,7 @@ def dfs_post_order(node: TreeNode) -> TreeNode:
     print(node)
 
 
-def dfs_search(node: TreeNode, target: int) -> TreeNode:
+def dfs_search(node: TreeNode, target: int) -> bool:
     if not node:
         return False
 

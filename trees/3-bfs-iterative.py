@@ -4,7 +4,7 @@ from TreeNode import TreeNode, treeA
 from collections import deque
 
 
-def bfs_level_order(node: TreeNode) -> TreeNode:
+def bfs_level_order(node: TreeNode):
 
     queue = deque()
     queue.append(node)
@@ -19,7 +19,7 @@ def bfs_level_order(node: TreeNode) -> TreeNode:
             queue.append(node.right)
 
 
-def bfs_search(node: TreeNode, target: int) -> TreeNode:
+def bfs_search(node: TreeNode, target: int) -> bool:
 
     if not head:
         return False

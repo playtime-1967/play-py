@@ -3,7 +3,7 @@
 from TreeNode import TreeNode, treeA
 
 
-def dfs_iterative(node: TreeNode) -> TreeNode:
+def dfs_iterative(node: TreeNode):
     stack = [node]
 
     while stack:
@@ -17,7 +17,7 @@ def dfs_iterative(node: TreeNode) -> TreeNode:
             stack.append(node.left)
 
 
-def dfs_search(node: TreeNode, target: int) -> TreeNode:
+def dfs_search(node: TreeNode, target: int) -> bool:
     if not node:
         return False
 
