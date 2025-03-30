@@ -21,7 +21,7 @@ def binary_search(arr, target: int) -> bool:
 
 print("binary_search: ", binary_search(arr, 1))
 
-# ---------- Binary search with condition- such as find number of false
+# ---------- Binary search with condition- such as find number of 'false'
 arr2 = [False, False, False, False, True, True, True]
 
 def binary_search_condition(arr) -> int:
