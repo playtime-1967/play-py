@@ -13,6 +13,7 @@ class Solution:
         node.left, node.right = node.right, node.left
         self.invertTree(node.left)
         self.invertTree(node.right)
+        
         return node
 
     # iterative

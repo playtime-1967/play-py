@@ -22,7 +22,7 @@ class Solution:
         if not root:
             return 0
 
-        stack = [(root, 1)]
+        stack = [(root, 1)] #store both the node and its depth to determine how deep the node is in the tree
         max_depth = 0
         while stack:
             node, depth = stack.pop()
