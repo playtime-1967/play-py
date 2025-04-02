@@ -7,7 +7,6 @@ from TreeNode import TreeNode, treeA
 
 class Solution:
     def isBalanced(self, root: TreeNode) -> bool:
-
         balanced = [True]
 
         def height(root: TreeNode) -> int:
@@ -28,6 +27,32 @@ class Solution:
 
         height(root)
         return balanced[0]
+
+    def isBalanced_2(self, root: TreeNode) -> bool:
+
+        heights = {}
+        stack = [(root, False)]
+
+        while stack:
+            node, visited = stack.pop()
+
+            if node is None:
+                continue
+
+            if not visited:
+                stack.append((node, True))
+                stack.append((node.left, False))
+                stack.append((node.right, False))
+            else:
+                left_height = heights[node.left] if node.left else 0
+                right_height = heights[node.right] if node.right else 0
+
+                if abs(left_height - right_height) > 1:
+                    return False
+
+                heights[node] = 1 + max(left_height, right_height)
+
+        return True
 
 
 s = Solution()
