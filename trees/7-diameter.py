@@ -45,7 +45,7 @@ class Solution:
 
                 diameter = left_height + right_height
                 max_diameter = max(max_diameter, diameter)
-                
+
                 heights[node] = 1+max(left_height, right_height)
 
         return max_diameter
@@ -54,3 +54,6 @@ class Solution:
 s = Solution()
 result = s.diameterOfBinaryTree(treeA)
 print("diameterOfBinaryTree: ", result)
+
+result = s.diameterOfBinaryTree_2(treeA)
+print("diameterOfBinaryTree_2: ", result)
