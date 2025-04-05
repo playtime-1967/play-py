@@ -13,7 +13,7 @@ class Solution:
             if not q and not p:
                 return True
 
-            if (not q and p) or (not p and q):
+            if not q or not p:
                 return False
 
             if q.val != p.val:
@@ -31,7 +31,7 @@ class Solution:
             if not node_p and not node_q:
                 continue
 
-            if (not node_p and node_q) or (not node_q and node_p):
+            if not node_p or not node_q:
                 return False
 
             if node_p.val != node_q.val:
