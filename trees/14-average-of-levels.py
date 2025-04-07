@@ -1,41 +1,38 @@
 
-# Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path
-# equals targetSum.
-# A leaf is a node with no children.
+# Given the root of a binary tree, return the average value of the nodes on each level in the form of an array. .
+
 from TreeNode import TreeNode, treeA
 from collections import deque
 
 
 class Solution:
 
-    def levelOrder(self, root: TreeNode) -> any:
+    def averageOfLevels(self, root: TreeNode) -> any:
         if not root:
             return []
 
-        levels = []
+        averages = []
         queue = deque()
         queue.append(root)
 
         while queue:
-            level = []
             n = len(queue)
-
+            sum = 0
             for _ in range(n):
                 node = queue.popleft()
-
-                level.append(node.val)
-
+                sum += node.val
                 if node.left:
                     queue.append(node.left)
 
                 if node.right:
                     queue.append(node.right)
 
-            levels.append(level)
+            average = sum / n
+            averages.append(average)
 
-        return levels
+        return averages
 
 
 s = Solution()
-result = s.levelOrder(treeA)
-print("levelOrder: ", result)
+result = s.averageOfLevels(treeA)
+print("averageOfLevels: ", result)
