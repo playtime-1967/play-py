@@ -16,7 +16,6 @@ def dfs_iterative(node: TreeNode):
         if node.left:
             stack.append(node.left)
 
-
 def dfs_search(node: TreeNode, target: int) -> bool:
     if not node:
         return False

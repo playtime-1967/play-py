@@ -9,6 +9,7 @@ class TreeNode:
 
 # Helper function to print a Tree
 
+
 def print_tree(tree: TreeNode):
     if not tree:
         return
