@@ -26,6 +26,23 @@ class Solution:
 
         return good_nodes
 
+    def goodNodes_2(self, root: TreeNode) -> int:
+       
+        good_nodes =[0]
+        def good(node, max_value):
+            if not node:
+                return
+            
+            if node.val >=  max_value:
+                good_nodes[0] +=1
+                max_value= node.val
+
+            good(node.left, max_value)
+            good(node.right, max_value)
+        
+        good(root,float('-inf'))
+        return good_nodes[0]
+
 
 s = Solution()
 result = s.goodNodes(treeA)
