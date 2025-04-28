@@ -14,10 +14,10 @@ class Solution:
                 return
             smallest(node.left)
 
-            if counter[0] == 1:
+            counter[0] -= 1
+            if counter[0] == 0:
                 result[0] = node.val
 
-            counter[0] -= 1
             if counter[0] > 0:
                 smallest(node.right)
 
